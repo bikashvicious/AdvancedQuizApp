@@ -1,0 +1,104 @@
+/* Name: Bikash Sapkota C0911133 Date: 28th November, 2023 */
+
+/* Global styling for the body */
+body {
+  font-family: "Arial", sans-serif;
+  margin-bottom: 30px;
+}
+
+/* Styling for the main heading (H1) with animation */
+h1 {
+  font-family: "Arial", sans-serif;
+  font-size: 2em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Animation properties using keyframes */
+  animation: scaleAnimation 0.8s ease-in-out infinite alternate;
+}
+
+/* Keyframes for the animation */
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Styling for the main quiz container */
+.quiz-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #3f0f0f;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Background gradient from left to right */
+  background: linear-gradient(to right, #e5e7e8, #5a7794);
+}
+
+/* Styling for individual quiz questions */
+.question {
+  background-color: #f1f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the question text within each quiz question */
+.question-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Styling for each answer option within a quiz question */
+.option {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.1s ease;
+}
+
+/* Styling for the radio button input within each answer option */
+.radio-button {
+  margin-right: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 25px;
+}
+
+/* Styling for the answer option button within each answer option */
+.option-button {
+  cursor: pointer;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for the answer option */
+.input:hover {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for the correct answer button when selected */
+input[type="radio"]:checked + .option-button[data-answer="correct"] {
+  color: #008000;
+  background-color: #d4edda;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Styling for incorrect answer buttons when selected */
+input[type="radio"]:checked + .option-button:not([data-answer="correct"]) {
+  color: #ff0000;
+  background-color: #f8d7da;
+  transform: scale(1.1);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
